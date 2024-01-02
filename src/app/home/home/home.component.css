@@ -1,0 +1,24 @@
+.content {
+	margin-top: 8px;
+	margin-left: 10px;
+	width: 300px;
+	float: left;
+}
+.background-image {
+	height: 600px;
+	width: 565%;
+	background-size: cover;
+	text-align: center;
+	display: block;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin-top: -4%;
+}
+.container2 {
+	position: relative;
+	width: 100%;
+	margin-top: 5%;
+	align-content: center
+}
+

@@ -1,0 +1,61 @@
+
+.About{    
+    margin-top: 3%;
+}
+.About-img{
+    float: left;
+    width: 30%;
+    height: 10%;
+    margin-left: -40%;
+    margin-top: -50%;
+}
+.About-img img {
+  height: 620px;
+margin-left: 28%
+}
+.AboutContent{
+     width: 65%;
+     float: right;
+     margin-right: 5%;
+         
+}
+h1 {
+    font-size: 20px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    text-align: justify
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* Additional styling for different sections can be added here */
+
+.join-us {
+    background-color: #f4f4f4;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,29 @@
+
+.logo-image {
+    height: 80px; 
+    width: 400px; 
+    margin-right: 20px;
+  }
+  
+.home{
+    margin-left: 115%;
+}
+
+.nav-bar{
+    text-decoration: black;
+}
+  
+.spacer {
+    flex: 1; 
+  }
+  
+button {
+    margin-left: 10px; 
+  }
+
+.recruiter{
+    margin-left: 2%;
+}  
+  
+ 
+  

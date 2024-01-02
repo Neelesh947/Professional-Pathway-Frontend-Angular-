@@ -1,0 +1,30 @@
+<mat-toolbar color="white" class="navbar">
+    <div class="logo-container">
+      <button mat-icon-button class="logo-button" aria-label="Logo">
+        <img class="logo-image" src="../../../assets/navbar/logo.png" alt="Logo">
+      </button>
+    </div>
+    <div class="nav-bar">
+      <a routerLink="/home"  mat-button class="home">Home</a>
+      <a routerLink=""  mat-button>Find a Job</a>
+      <a routerLink="/about"  mat-button>About</a>
+      <a mat-button>Page</a>
+      <a mat-button>Contact</a>
+      <span class="spacer"></span>
+      <button routerLink="/uregister" mat-stroked-button color="basic" style="margin-right: 10px;">Register</button>
+      <button routerLink="/ulogin" 
+        mat-stroked-button color="accent">Login</button>
+      <a mat-button [matMenuTriggerFor]="menu" class="recruiter">For Employees</a>
+    </div>
+    <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="/rlogin">
+          <mat-icon>login</mat-icon>
+          <span>Login</span>
+        </a>
+        <a mat-menu-item routerLink="/rregister">
+          <mat-icon>how_to_reg</mat-icon>
+          <span>Register</span>
+        </a>
+      </mat-menu>      
+  </mat-toolbar>
+  
