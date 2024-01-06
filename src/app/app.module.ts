@@ -23,6 +23,8 @@ import { FooterComponent } from './component/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { authInterceptorProvider } from './Services/auth.interceptor';
+import { UserDashboardComponent } from './home/user/user-dashboard/user-dashboard.component';
 
 
 @NgModule({
@@ -35,7 +37,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     RegisterComponent,
     RregisterComponent,
     RloginComponent,
-    FooterComponent
+    FooterComponent,
+    UserDashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatInputModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(), authInterceptorProvider
   ],
   bootstrap: [AppComponent]
 })

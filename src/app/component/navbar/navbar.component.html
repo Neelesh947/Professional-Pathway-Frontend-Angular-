@@ -5,16 +5,16 @@
       </button>
     </div>
     <div class="nav-bar">
-      <a routerLink="/home"  mat-button class="home">Home</a>
-      <a routerLink=""  mat-button>Find a Job</a>
-      <a routerLink="/about"  mat-button>About</a>
-      <a mat-button>Page</a>
-      <a mat-button>Contact</a>
+      <a *ngIf="!login.isLoggedIn" routerLink="/home"  mat-button class="home">Home</a>
+      <a *ngIf="!login.isLoggedIn" routerLink=""  mat-button>Find a Job</a>
+      <a *ngIf="!login.isLoggedIn" routerLink="/about"  mat-button>About</a>
+      <a *ngIf="!login.isLoggedIn" mat-button>Page</a>
+      <a *ngIf="!login.isLoggedIn" mat-button>Contact</a>
       <span class="spacer"></span>
-      <button routerLink="/uregister" mat-stroked-button color="basic" style="margin-right: 10px;">Register</button>
-      <button routerLink="/ulogin" 
+      <button *ngIf="!login.isLoggedIn" routerLink="/uregister" mat-stroked-button color="basic" style="margin-right: 10px;">Register</button>
+      <button *ngIf="!login.isLoggedIn" routerLink="/ulogin" 
         mat-stroked-button color="accent">Login</button>
-      <a mat-button [matMenuTriggerFor]="menu" class="recruiter">For Employees</a>
+      <a *ngIf="!login.isLoggedIn" mat-button [matMenuTriggerFor]="menu" class="recruiter">For Employees</a>
     </div>
     <mat-menu #menu="matMenu">
         <a mat-menu-item routerLink="/rlogin">
@@ -25,6 +25,19 @@
           <mat-icon>how_to_reg</mat-icon>
           <span>Register</span>
         </a>
-      </mat-menu>      
+      </mat-menu> 
+      
+      <a 
+      *ngIf="login.isLoggedIn() "
+      mat-icon-button class="welcome-text" aria-label="Example icon-button with heart icon">
+       Welcome {{login.getUser().firstname}}
+      </a>
+
+      <a 
+      (click)="logout()"
+      *ngIf="login.isLoggedIn"
+      mat-icon-button class="example-icon favorite-icon register" aria-label="Example icon-button with heart icon">
+        Logout
+      </a>
   </mat-toolbar>
   
