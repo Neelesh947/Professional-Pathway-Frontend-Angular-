@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import { MatListModule } from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { authInterceptorProvider } from './Services/auth.interceptor';
 import { UserDashboardComponent } from './home/user/user-dashboard/user-dashboard.component';
+import { SidebarUserComponent } from './home/user/sidebar-user/sidebar-user.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { UserDashboardComponent } from './home/user/user-dashboard/user-dashboar
     RregisterComponent,
     RloginComponent,
     FooterComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    SidebarUserComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +54,7 @@ import { UserDashboardComponent } from './home/user/user-dashboard/user-dashboar
     MatInputModule,   
     FormsModule ,
     HttpClientModule,MatSnackBarModule,
+    MatListModule
   ],
   exports:[
     MatInputModule

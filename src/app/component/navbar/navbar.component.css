@@ -24,9 +24,12 @@ button {
 .recruiter{
     margin-left: 2%;
 }  
-  
-.welcome-text{
-  margin-right: 50%;
- }
+
+.name{
+  margin-left: 600px;
+}
  
+.logout{
+  margin-left: 40%;
+}
   

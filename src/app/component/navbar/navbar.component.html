@@ -5,16 +5,16 @@
       </button>
     </div>
     <div class="nav-bar">
-      <a *ngIf="!login.isLoggedIn" routerLink="/home"  mat-button class="home">Home</a>
-      <a *ngIf="!login.isLoggedIn" routerLink=""  mat-button>Find a Job</a>
-      <a *ngIf="!login.isLoggedIn" routerLink="/about"  mat-button>About</a>
-      <a *ngIf="!login.isLoggedIn" mat-button>Page</a>
-      <a *ngIf="!login.isLoggedIn" mat-button>Contact</a>
+      <a *ngIf="!isLoggedin" routerLink="/home"  mat-button class="home">Home</a>
+      <a *ngIf="!isLoggedin" routerLink=""  mat-button>Find a Job</a>
+      <a *ngIf="!isLoggedin" routerLink="/about"  mat-button>About</a>
+      <a *ngIf="!isLoggedin" mat-button>Page</a>
+      <a *ngIf="!isLoggedin" mat-button>Contact</a>
       <span class="spacer"></span>
-      <button *ngIf="!login.isLoggedIn" routerLink="/uregister" mat-stroked-button color="basic" style="margin-right: 10px;">Register</button>
-      <button *ngIf="!login.isLoggedIn" routerLink="/ulogin" 
+      <button *ngIf="!isLoggedin" routerLink="/uregister" mat-stroked-button color="basic" style="margin-right: 10px;">Register</button>
+      <button *ngIf="!isLoggedin" routerLink="/ulogin" 
         mat-stroked-button color="accent">Login</button>
-      <a *ngIf="!login.isLoggedIn" mat-button [matMenuTriggerFor]="menu" class="recruiter">For Employees</a>
+      <a *ngIf="!isLoggedin" mat-button [matMenuTriggerFor]="menu" class="recruiter">For Employees</a>
     </div>
     <mat-menu #menu="matMenu">
         <a mat-menu-item routerLink="/rlogin">
@@ -25,18 +25,18 @@
           <mat-icon>how_to_reg</mat-icon>
           <span>Register</span>
         </a>
-      </mat-menu> 
-      
+      </mat-menu>
+
       <a 
-      *ngIf="login.isLoggedIn() "
-      mat-icon-button class="welcome-text" aria-label="Example icon-button with heart icon">
-       Welcome {{login.getUser().firstname}}
+      *ngIf="isLoggedin && user"
+      mat-icon-button class="name" aria-label="Example icon-button with heart icon">
+       Welcome {{login.getUser().fullName}}
       </a>
 
       <a 
-      (click)="logout()"
-      *ngIf="login.isLoggedIn"
-      mat-icon-button class="example-icon favorite-icon register" aria-label="Example icon-button with heart icon">
+      (click)="logout()"s
+      *ngIf="isLoggedin"
+      mat-icon-button class="logout" aria-label="Example icon-button with heart icon">
         Logout
       </a>
   </mat-toolbar>

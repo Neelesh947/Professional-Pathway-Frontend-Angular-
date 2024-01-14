@@ -24,7 +24,6 @@ const routes: Routes = [
     path:"ulogin",
     component:LoginComponent,
     pathMatch:"full",
-    canActivate:[UserGuard]
   },
   {
     path:"uregister",
