@@ -12,7 +12,7 @@ export class LoginService {
   //generate tokens
   public generateTokens(loginData:any){
 
-    return this.http.post(`${baseUrl}/generate-token`,loginData);    
+    return this.http.post(`http://localhost:8082/generate-token`,loginData);    
   }
 
   //login user: set token in local storage
@@ -75,7 +75,7 @@ export class LoginService {
   //current-user: user which is logged in
   public getCurrentUser()
   {
-    return this.http.get(`${baseUrl}/current-user`);
+    return this.http.get(`http://localhost:8082/current-user`);
   }
 
 
