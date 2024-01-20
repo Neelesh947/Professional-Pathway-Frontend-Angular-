@@ -54,9 +54,10 @@ export class LoginComponent implements OnInit{
 
           //redirect to the user dashboard
           if(this.login.getUser!=null)
-          {
-            this.router.navigate(['user-dashboard']);
-          }
+            {
+              this.router.navigate(['user-dashboard']);
+              this.login.loginStatusSubject.next(true);
+            }
           else
             {
               this.login.logout();
@@ -67,7 +68,7 @@ export class LoginComponent implements OnInit{
           console.log("Error !");
           console.log(error);
           this.snack.open("INVALID DETAILS !!    TRY AGAIN","OK",{
-            duration: 3000
+          duration: 3000
           });
         })
 

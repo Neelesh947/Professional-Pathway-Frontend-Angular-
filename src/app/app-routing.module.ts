@@ -8,6 +8,7 @@ import { RloginComponent } from './home/recruiter/rlogin/rlogin.component';
 import { RregisterComponent } from './home/recruiter/rregister/rregister.component';
 import { UserDashboardComponent } from './home/user/user-dashboard/user-dashboard.component';
 import { UserGuard } from './Services/user.guard';
+import { RecruiterGuard } from './Services/recruiter.guard';
 
 const routes: Routes = [
   {
@@ -38,12 +39,14 @@ const routes: Routes = [
   {
     path:"rlogin",
     component:RloginComponent,
-    pathMatch:'full'
+    pathMatch:'full',
+    canActivate: [RecruiterGuard]
   },
   {
     path:"user-dashboard",
     component:UserDashboardComponent,
-    pathMatch:"full"
+    pathMatch:"full",    
+    canActivate:[UserGuard],
   }
 ];
 
