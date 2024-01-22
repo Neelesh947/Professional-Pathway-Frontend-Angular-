@@ -9,6 +9,8 @@ import { RregisterComponent } from './home/recruiter/rregister/rregister.compone
 import { UserDashboardComponent } from './home/user/user-dashboard/user-dashboard.component';
 import { UserGuard } from './Services/user.guard';
 import { RecruiterGuard } from './Services/recruiter.guard';
+import { UprofileComponent } from './home/user/uprofile/uprofile.component';
+import { JobsearchlistComponent } from './home/user/jobsearchlist/jobsearchlist.component';
 
 const routes: Routes = [
   {
@@ -24,7 +26,7 @@ const routes: Routes = [
   {
     path:"ulogin",
     component:LoginComponent,
-    pathMatch:"full",
+    pathMatch:'full',
   },
   {
     path:"uregister",
@@ -40,13 +42,21 @@ const routes: Routes = [
     path:"rlogin",
     component:RloginComponent,
     pathMatch:'full',
-    canActivate: [RecruiterGuard]
   },
   {
     path:"user-dashboard",
-    component:UserDashboardComponent,
-    pathMatch:"full",    
+    component:UserDashboardComponent, 
     canActivate:[UserGuard],
+    children:[
+      {
+        path:'uprofile',
+        component:UprofileComponent,
+      },
+      {
+        path:'joblist',
+        component:JobsearchlistComponent,
+      }
+    ],
   }
 ];
 

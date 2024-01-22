@@ -26,6 +26,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { authInterceptorProvider } from './Services/auth.interceptor';
 import { UserDashboardComponent } from './home/user/user-dashboard/user-dashboard.component';
 import { SidebarUserComponent } from './home/user/sidebar-user/sidebar-user.component';
+import { UprofileComponent } from './home/user/uprofile/uprofile.component';
+import { JobsearchlistComponent } from './home/user/jobsearchlist/jobsearchlist.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { SidebarUserComponent } from './home/user/sidebar-user/sidebar-user.comp
     RloginComponent,
     FooterComponent,
     UserDashboardComponent,
-    SidebarUserComponent
+    SidebarUserComponent,
+    UprofileComponent,
+    JobsearchlistComponent
   ],
   imports: [
     BrowserModule,

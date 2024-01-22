@@ -1,0 +1,36 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <h1>Available Jobs</h1>
+        <div class="row top" *ngIf="joblist">
+            <div class="col-md-4" *ngFor="let q of joblist">
+                
+                <mat-card class=" bottom">
+                    <mat-card-header>
+                        <div mat-card-avatar class="example-header-image"></div>
+                        <mat-card-title>{{q.title}}</mat-card-title>
+                        <mat-card-subtitle>
+                            Experience: {{q.experience}}  <br>
+                            Company: {{q.company}}
+                        </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content style="margin-top: 10px;">
+                        <p class="truncate">{{q.description}}</p>
+                    </mat-card-content>
+
+                    <mat-card-actions >                        
+                        <button mat-stroked-button color="primary">View</button>
+                        <button mat-raised-button color="accent" style="margin-left: 60px;">Apply</button>
+                    </mat-card-actions>
+                </mat-card>
+
+            </div>
+            <div class="col-md-12" *ngIf="joblist.length==0">
+                <mat-card>
+                    <mat-card-content>
+                        <h1>No Jobs Available</h1>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
