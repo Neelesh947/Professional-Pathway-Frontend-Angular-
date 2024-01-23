@@ -12,4 +12,9 @@ export class JobsearchService {
   {
     return this.http.get(`http://localhost:8083/jobpost/`)
   }
+
+  public getJobByJobId(jobId:any)
+  {
+    return this.http.get(`http://localhost:8083/jobpost/${jobId}`);
+  }
 }

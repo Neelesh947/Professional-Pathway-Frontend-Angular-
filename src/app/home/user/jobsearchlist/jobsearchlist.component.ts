@@ -34,7 +34,7 @@ export class JobsearchlistComponent implements OnInit{
   
   ngOnInit(): void {
     this._joblist.getAllJobPosted().subscribe((data:any)=>{
-      console.log(data);
+      //console.log(data);
       this.joblist=data;
     },(error)=>{
       console.log("something went wrong");

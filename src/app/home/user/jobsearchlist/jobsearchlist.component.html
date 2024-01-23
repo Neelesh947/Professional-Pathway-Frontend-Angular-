@@ -18,7 +18,9 @@
                     </mat-card-content>
 
                     <mat-card-actions >                        
-                        <button mat-stroked-button color="primary">View</button>
+                        <button mat-stroked-button 
+                        [routerLink]="'/user-dashboard/jobdescription/'+q.jobId+'/'+q.title"
+                        color="primary">View</button>
                         <button mat-raised-button color="accent" style="margin-left: 60px;">Apply</button>
                     </mat-card-actions>
                 </mat-card>

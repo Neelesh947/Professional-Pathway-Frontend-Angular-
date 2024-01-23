@@ -1,0 +1,51 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card *ngFor="let q of job">
+                    <mat-card-header>
+                        <mat-card-title>{{q.title}}</mat-card-title>
+                        <mat-card-subtitle>{{q.company}}</mat-card-subtitle>
+                    </mat-card-header>
+
+                    <mat-divider></mat-divider>
+                    <br>                    
+                    <p> <mat-icon style="margin-left: 20px; margin-right: 10px;">work</mat-icon>{{q.experience}}
+                        &nbsp; &nbsp; | &nbsp; &nbsp; {{q.salary}}
+                    </p>
+                    <p>
+                        <mat-icon style="margin-left: 20px; margin-right: 10px;">location_on</mat-icon> {{q.location}}
+                    </p>
+
+                    <mat-divider></mat-divider>
+                    <br>
+                       <p style="margin-left: 20px;"> Posted : {{q.postDate}}
+                        &nbsp; &nbsp; | &nbsp; &nbsp;  Number of openings: {{q.noOfPost}}
+                    </p>
+
+                    <mat-divider></mat-divider> <mat-divider></mat-divider>
+                    <br><br>
+
+                    <mat-card-content>
+                        <h1><b>Job Description</b></h1>
+                        <h3>Role: {{q.title}}</h3>
+                        <h3>Experience: {{q.experience}}</h3>
+                        <h3>CTC: {{q.salary}}</h3>
+                        <h3>Location: {{q.location}}</h3>
+                        <h3><b>Job Description: </b>{{q.description}}</h3>
+
+                        <br>
+                        <h3><b>Skills: -</b><br>{{q.skills}}</h3>
+                    </mat-card-content>
+
+                    <mat-card-actions>
+                        <button class="text-center"
+                         mat-raised-button color="primary">Apply</button>
+                         <button class="text-center"
+                         mat-raised-button color="basic">Back</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

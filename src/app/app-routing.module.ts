@@ -11,6 +11,7 @@ import { UserGuard } from './Services/user.guard';
 import { RecruiterGuard } from './Services/recruiter.guard';
 import { UprofileComponent } from './home/user/uprofile/uprofile.component';
 import { JobsearchlistComponent } from './home/user/jobsearchlist/jobsearchlist.component';
+import { ApplyjobComponent } from './home/user/applyjob/applyjob.component';
 
 const routes: Routes = [
   {
@@ -55,6 +56,10 @@ const routes: Routes = [
       {
         path:'joblist',
         component:JobsearchlistComponent,
+      },
+      {
+        path:'jobdescription/:jobId/:title',
+        component:ApplyjobComponent,
       }
     ],
   }

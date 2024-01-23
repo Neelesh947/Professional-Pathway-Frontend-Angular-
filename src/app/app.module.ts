@@ -28,6 +28,7 @@ import { UserDashboardComponent } from './home/user/user-dashboard/user-dashboar
 import { SidebarUserComponent } from './home/user/sidebar-user/sidebar-user.component';
 import { UprofileComponent } from './home/user/uprofile/uprofile.component';
 import { JobsearchlistComponent } from './home/user/jobsearchlist/jobsearchlist.component';
+import { ApplyjobComponent } from './home/user/applyjob/applyjob.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { JobsearchlistComponent } from './home/user/jobsearchlist/jobsearchlist.
     UserDashboardComponent,
     SidebarUserComponent,
     UprofileComponent,
-    JobsearchlistComponent
+    JobsearchlistComponent,
+    ApplyjobComponent
   ],
   imports: [
     BrowserModule,
