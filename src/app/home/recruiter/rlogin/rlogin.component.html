@@ -4,12 +4,12 @@
             <div class="col-md-6 offset-md-3">
                 <mat-card class="card">
                     <h3 class="text-center" style="margin-top:10% ;">Recruiter Login Page !!</h3>    
-                    <form >
-    
+                    <form (ngSubmit)="formSubmit()">
                         <!-------------------------------UserName Field--------->    
                         <mat-form-field appearance="outline" class="full-width">
                             <mat-label>Username</mat-label>
                             <input 
+                            [(ngModel)]="loginData.username"
                             name="username"
                             matInput placeholder="Enter here">
                         </mat-form-field>
@@ -17,6 +17,7 @@
                         <mat-form-field appearance="outline" class="full-width">
                             <mat-label>Password</mat-label>
                             <input 
+                            [(ngModel)]="loginData.password"
                             name="password"
                             matInput type="password" placeholder="Enter here">
                         </mat-form-field>
@@ -29,7 +30,7 @@
                     <div class="loginImage">
                         <img src="../../../../assets/login/HRlogin.png">
                     </div>
-                </mat-card>    
+                </mat-card> 
             </div>
         </div>
     </div>

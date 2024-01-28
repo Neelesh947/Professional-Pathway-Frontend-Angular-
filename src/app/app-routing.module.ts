@@ -12,6 +12,8 @@ import { RecruiterGuard } from './Services/recruiter.guard';
 import { UprofileComponent } from './home/user/uprofile/uprofile.component';
 import { JobsearchlistComponent } from './home/user/jobsearchlist/jobsearchlist.component';
 import { ApplyjobComponent } from './home/user/applyjob/applyjob.component';
+import { RecruiterDashboardComponent } from './home/recruiter/recruiter-dashboard/recruiter-dashboard.component';
+import { RprofileComponent } from './home/recruiter/rprofile/rprofile.component';
 
 const routes: Routes = [
   {
@@ -62,6 +64,17 @@ const routes: Routes = [
         component:ApplyjobComponent,
       }
     ],
+  },
+  {
+    path:'recruiter-dashboard',
+    component:RecruiterDashboardComponent,
+    canActivate:[RecruiterGuard],
+    children:[
+      {
+        path:"recruiter-profile",
+        component:RprofileComponent
+      }
+    ]
   }
 ];
 

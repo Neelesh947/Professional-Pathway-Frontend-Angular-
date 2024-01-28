@@ -30,11 +30,11 @@
       <a 
       *ngIf="isLoggedin && user"
       mat-icon-button class="name" aria-label="Example icon-button with heart icon">
-       Welcome {{login.getUser().fullName}}
+       Welcome {{login.getUser().fullName}} {{_recruiter.getUser().name}}
       </a>
 
       <a 
-      (click)="logout()"s
+      (click)="logout()"
       *ngIf="isLoggedin"
       mat-icon-button class="logout" aria-label="Example icon-button with heart icon">
         Logout

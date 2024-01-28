@@ -29,6 +29,9 @@ import { SidebarUserComponent } from './home/user/sidebar-user/sidebar-user.comp
 import { UprofileComponent } from './home/user/uprofile/uprofile.component';
 import { JobsearchlistComponent } from './home/user/jobsearchlist/jobsearchlist.component';
 import { ApplyjobComponent } from './home/user/applyjob/applyjob.component';
+import { RecruiterDashboardComponent } from './home/recruiter/recruiter-dashboard/recruiter-dashboard.component';
+import { SidebarRecruiterComponent } from './home/recruiter/sidebar-recruiter/sidebar-recruiter.component';
+import { RprofileComponent } from './home/recruiter/rprofile/rprofile.component';
 
 
 @NgModule({
@@ -46,7 +49,10 @@ import { ApplyjobComponent } from './home/user/applyjob/applyjob.component';
     SidebarUserComponent,
     UprofileComponent,
     JobsearchlistComponent,
-    ApplyjobComponent
+    ApplyjobComponent,
+    RecruiterDashboardComponent,
+    SidebarRecruiterComponent,
+    RprofileComponent
   ],
   imports: [
     BrowserModule,
