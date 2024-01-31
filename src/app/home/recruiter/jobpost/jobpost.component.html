@@ -1,0 +1,104 @@
+<mat-card>
+    <h1 class="heading">Post Your Job</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-8 offset-2">
+                    <form >
+                        <mat-form-field appearance="fill" class="width100" >
+                            <mat-label>Enter Job Title</mat-label>
+                            <input matInput
+                            name="title"
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="width100" >
+                            <mat-label>Enter Job Description</mat-label>
+                            <textarea name="description"
+                                matInput 
+                                placeholder="Enter here"
+                                rows="3"></textarea>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="marks">
+                            <mat-label>Enter Total Years of Experience required</mat-label>
+                            <input matInput 
+                            name="maxMarks"
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="questions">
+                            <mat-label>Enter Number Of Available posts</mat-label>
+                            <input matInput 
+                            name="numberofquestions"
+                            placeholder="Enter here">
+                        </mat-form-field>   
+                        
+                        <mat-form-field appearance="fill" class="width100" >
+                            <mat-label>Enter Company Name</mat-label>
+                            <input matInput
+                            name="title"
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="width100" >
+                            <mat-label>Enter Job/Company Location</mat-label>
+                            <input matInput
+                            name="title"
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="marks">
+                            <mat-label>Enter Salary</mat-label>
+                            <input matInput 
+                            name="maxMarks"
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="questions">
+                            <mat-label>Enter Employement Types</mat-label>
+                            <input matInput 
+                            name="numberofquestions"
+                            placeholder="Enter here">
+                        </mat-form-field>  
+
+                        <mat-form-field appearance="fill" class="marks">
+                            <mat-label>Enter required Skills</mat-label>
+                            <input matInput 
+                            name="maxMarks"
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Choose deadline date</mat-label>
+                            <input matInput [matDatepicker]="picker">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
+                        <button mat-raised-button (click)="picker.open()" color="primary"> Open</button>
+
+
+                        <mat-form-field appearance="fill" class="width100" >
+                            <mat-label>Enter Contact Information</mat-label>
+                            <input matInput 
+                            name="title"
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill" class="width100" >
+                            <mat-label>Enter Job Post date</mat-label>
+                            <input matInput
+                            name="title"
+                            placeholder="Enter here">
+                        </mat-form-field>
+
+           
+                          <div class="container text-center ">
+                            <button mat-raised-button color="primary">Post</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

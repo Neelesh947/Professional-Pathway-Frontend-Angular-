@@ -9,6 +9,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatMenuModule} from '@angular/material/menu';
 import { HomeComponent } from './home/home/home.component';
 import { AboutComponent } from './home/about/about.component';
@@ -20,7 +21,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FooterComponent } from './component/footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { authInterceptorProvider } from './Services/auth.interceptor';
@@ -32,6 +33,10 @@ import { ApplyjobComponent } from './home/user/applyjob/applyjob.component';
 import { RecruiterDashboardComponent } from './home/recruiter/recruiter-dashboard/recruiter-dashboard.component';
 import { SidebarRecruiterComponent } from './home/recruiter/sidebar-recruiter/sidebar-recruiter.component';
 import { RprofileComponent } from './home/recruiter/rprofile/rprofile.component';
+import { JobpostComponent } from './home/recruiter/jobpost/jobpost.component';
+import { JobsearchComponent } from './home/recruiter/jobsearch/jobsearch.component';
+import { AppliedcandidatesComponent } from './home/recruiter/appliedcandidates/appliedcandidates.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 @NgModule({
@@ -52,7 +57,10 @@ import { RprofileComponent } from './home/recruiter/rprofile/rprofile.component'
     ApplyjobComponent,
     RecruiterDashboardComponent,
     SidebarRecruiterComponent,
-    RprofileComponent
+    RprofileComponent,
+    JobpostComponent,
+    JobsearchComponent,
+    AppliedcandidatesComponent
   ],
   imports: [
     BrowserModule,
@@ -66,13 +74,14 @@ import { RprofileComponent } from './home/recruiter/rprofile/rprofile.component'
     MatInputModule,   
     FormsModule ,
     HttpClientModule,MatSnackBarModule,
-    MatListModule
+    MatListModule,MatDatepickerModule,ReactiveFormsModule,
+    MatNativeDateModule
   ],
   exports:[
     MatInputModule
   ],
   providers: [
-    provideClientHydration(), authInterceptorProvider
+     authInterceptorProvider
   ],
   bootstrap: [AppComponent]
 })

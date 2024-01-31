@@ -14,6 +14,9 @@ import { JobsearchlistComponent } from './home/user/jobsearchlist/jobsearchlist.
 import { ApplyjobComponent } from './home/user/applyjob/applyjob.component';
 import { RecruiterDashboardComponent } from './home/recruiter/recruiter-dashboard/recruiter-dashboard.component';
 import { RprofileComponent } from './home/recruiter/rprofile/rprofile.component';
+import { JobpostComponent } from './home/recruiter/jobpost/jobpost.component';
+import { JobsearchComponent } from './home/recruiter/jobsearch/jobsearch.component';
+import { AppliedcandidatesComponent } from './home/recruiter/appliedcandidates/appliedcandidates.component';
 
 const routes: Routes = [
   {
@@ -73,6 +76,18 @@ const routes: Routes = [
       {
         path:"recruiter-profile",
         component:RprofileComponent
+      },
+      {
+        path:"job-post",
+        component:JobpostComponent
+      },
+      {
+        path:"job-search",
+        component:JobsearchComponent
+      },
+      {
+        path:"applied-candidates",
+        component:AppliedcandidatesComponent
       }
     ]
   }

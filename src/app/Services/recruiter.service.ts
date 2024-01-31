@@ -81,7 +81,7 @@ export class RecruiterService {
   //add Recruiter
   public addRecruiter(recruiter: any)
   {
-    return this._http.post(`http://localhost:8081/recruiter`,recruiter);
+    return this._http.post(`http://localhost:8081/recruiter/`,recruiter);
   }
 
 }
