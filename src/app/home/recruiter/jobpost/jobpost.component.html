@@ -4,95 +4,96 @@
         <div class="bootstrap-wrapper">
             <div class="row">
                 <div class="col-md-8 offset-2">
-                    <form >
+                    <form (ngSubmit)="formSubmit()">
                         <mat-form-field appearance="fill" class="width100" >
                             <mat-label>Enter Job Title</mat-label>
                             <input matInput
-                            name="title"
+                            name="title" [(ngModel)]="job.title"
                             placeholder="Enter here">
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="width100" >
                             <mat-label>Enter Job Description</mat-label>
                             <textarea name="description"
-                                matInput 
+                                matInput [(ngModel)]="job.description"
                                 placeholder="Enter here"
                                 rows="3"></textarea>
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="marks">
                             <mat-label>Enter Total Years of Experience required</mat-label>
-                            <input matInput 
-                            name="maxMarks"
+                            <input matInput [(ngModel)]="job.experience"
+                            name="experience"
                             placeholder="Enter here">
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="questions">
                             <mat-label>Enter Number Of Available posts</mat-label>
-                            <input matInput 
-                            name="numberofquestions"
+                            <input matInput [(ngModel)]="job.noOfPost"
+                            name="noOfPost"
                             placeholder="Enter here">
                         </mat-form-field>   
                         
                         <mat-form-field appearance="fill" class="width100" >
                             <mat-label>Enter Company Name</mat-label>
                             <input matInput
-                            name="title"
+                            name="company" [(ngModel)]="job.company"
                             placeholder="Enter here">
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="width100" >
                             <mat-label>Enter Job/Company Location</mat-label>
-                            <input matInput
-                            name="title"
+                            <input matInput [(ngModel)]="job.location"
+                            name="location"
                             placeholder="Enter here">
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="marks">
                             <mat-label>Enter Salary</mat-label>
-                            <input matInput 
-                            name="maxMarks"
+                            <input matInput [(ngModel)]="job.salary"
+                            name="salary"
                             placeholder="Enter here">
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="questions">
                             <mat-label>Enter Employement Types</mat-label>
-                            <input matInput 
-                            name="numberofquestions"
+                            <input matInput [(ngModel)]="job.employmentType"
+                            name="employmentType"
                             placeholder="Enter here">
                         </mat-form-field>  
 
-                        <mat-form-field appearance="fill" class="marks">
-                            <mat-label>Enter required Skills</mat-label>
-                            <input matInput 
-                            name="maxMarks"
-                            placeholder="Enter here">
-                        </mat-form-field>
+                        <mat-form-field class="skills">
+                            <mat-label>Required Skills</mat-label>
+                            <mat-select [(ngModel)]="job.skills" name="skills"
+                            [formControl]="toppings" multiple>
+                              <mat-select-trigger>
+                                {{toppings.value?.[0] || ''}}
+                                @if ((toppings.value?.length || 0) > 1) {
+                                  <span class="example-additional-selection">
+                                    (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+                                  </span>
+                                }
+                              </mat-select-trigger>
+                              @for (topping of toppingList; track topping) {
+                            <mat-option [value]="topping">{{topping}}</mat-option>
+                              }
+                            </mat-select>
+                          </mat-form-field>
 
                         <mat-form-field class="example-full-width">
                             <mat-label>Choose deadline date</mat-label>
-                            <input matInput [matDatepicker]="picker">
-                            <mat-hint>MM/DD/YYYY</mat-hint>
-                            <mat-datepicker #picker></mat-datepicker>
+                            <input  [(ngModel)]="job.applicationDeadlines"
+                            matInput name="applicationDeadlines">
+                            <mat-hint>YYYY-MM-DD</mat-hint>
                         </mat-form-field>
-                        <button mat-raised-button (click)="picker.open()" color="primary"> Open</button>
-
-
+                        
                         <mat-form-field appearance="fill" class="width100" >
                             <mat-label>Enter Contact Information</mat-label>
-                            <input matInput 
-                            name="title"
+                            <input matInput [(ngModel)]="job.contactInformation"
+                            name="contactInformation"
                             placeholder="Enter here">
                         </mat-form-field>
-
-                        <mat-form-field appearance="fill" class="width100" >
-                            <mat-label>Enter Job Post date</mat-label>
-                            <input matInput
-                            name="title"
-                            placeholder="Enter here">
-                        </mat-form-field>
-
-           
+                                 
                           <div class="container text-center ">
                             <button mat-raised-button color="primary">Post</button>
                         </div>

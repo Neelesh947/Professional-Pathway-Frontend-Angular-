@@ -11,6 +11,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatSelectModule} from '@angular/material/select';
 import { HomeComponent } from './home/home/home.component';
 import { AboutComponent } from './home/about/about.component';
 import { LoginComponent } from './home/user/login/login.component';
@@ -18,6 +19,7 @@ import { RegisterComponent } from './home/user/register/register.component';
 import { RregisterComponent } from './home/recruiter/rregister/rregister.component';
 import { RloginComponent } from './home/recruiter/rlogin/rlogin.component';
 import {MatCardModule} from '@angular/material/card';
+import { DatePipe } from '@angular/common';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FooterComponent } from './component/footer/footer.component';
@@ -37,6 +39,7 @@ import { JobpostComponent } from './home/recruiter/jobpost/jobpost.component';
 import { JobsearchComponent } from './home/recruiter/jobsearch/jobsearch.component';
 import { AppliedcandidatesComponent } from './home/recruiter/appliedcandidates/appliedcandidates.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { YourJobPostsComponent } from './home/recruiter/your-job-posts/your-job-posts.component';
 
 
 @NgModule({
@@ -60,7 +63,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     RprofileComponent,
     JobpostComponent,
     JobsearchComponent,
-    AppliedcandidatesComponent
+    AppliedcandidatesComponent,
+    YourJobPostsComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +79,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     FormsModule ,
     HttpClientModule,MatSnackBarModule,
     MatListModule,MatDatepickerModule,ReactiveFormsModule,
-    MatNativeDateModule
+    MatNativeDateModule,MatSelectModule,DatePipe
   ],
   exports:[
     MatInputModule

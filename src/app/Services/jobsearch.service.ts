@@ -17,4 +17,16 @@ export class JobsearchService {
   {
     return this.http.get(`http://localhost:8083/jobpost/${jobId}`);
   }
+
+  // post job
+  public getJobByWhichtheRecruiterLogin(recruiterId:any)
+  {
+    return this.http.get(`http://localhost:8083/jobpost/recruiter/${recruiterId}`);
+  }
+
+  //post job
+  public postjob(job: any)
+  {
+    return this.http.post(`http://localhost:8083/jobpost/`,job)
+  }
 }

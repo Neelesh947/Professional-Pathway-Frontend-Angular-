@@ -17,6 +17,7 @@ import { RprofileComponent } from './home/recruiter/rprofile/rprofile.component'
 import { JobpostComponent } from './home/recruiter/jobpost/jobpost.component';
 import { JobsearchComponent } from './home/recruiter/jobsearch/jobsearch.component';
 import { AppliedcandidatesComponent } from './home/recruiter/appliedcandidates/appliedcandidates.component';
+import { YourJobPostsComponent } from './home/recruiter/your-job-posts/your-job-posts.component';
 
 const routes: Routes = [
   {
@@ -88,6 +89,10 @@ const routes: Routes = [
       {
         path:"applied-candidates",
         component:AppliedcandidatesComponent
+      },
+      {
+        path:"job-post-recruiter",
+        component:YourJobPostsComponent
       }
     ]
   }
