@@ -40,6 +40,7 @@ import { JobsearchComponent } from './home/recruiter/jobsearch/jobsearch.compone
 import { AppliedcandidatesComponent } from './home/recruiter/appliedcandidates/appliedcandidates.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { YourJobPostsComponent } from './home/recruiter/your-job-posts/your-job-posts.component';
+import { UpdateJobsComponent } from './home/recruiter/update-jobs/update-jobs.component';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { YourJobPostsComponent } from './home/recruiter/your-job-posts/your-job-
     JobpostComponent,
     JobsearchComponent,
     AppliedcandidatesComponent,
-    YourJobPostsComponent
+    YourJobPostsComponent,
+    UpdateJobsComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,7 @@ import { JobpostComponent } from './home/recruiter/jobpost/jobpost.component';
 import { JobsearchComponent } from './home/recruiter/jobsearch/jobsearch.component';
 import { AppliedcandidatesComponent } from './home/recruiter/appliedcandidates/appliedcandidates.component';
 import { YourJobPostsComponent } from './home/recruiter/your-job-posts/your-job-posts.component';
+import { UpdateJobsComponent } from './home/recruiter/update-jobs/update-jobs.component';
 
 const routes: Routes = [
   {
@@ -93,6 +94,10 @@ const routes: Routes = [
       {
         path:"job-post-recruiter",
         component:YourJobPostsComponent
+      },
+      {
+        path:"edit-jobs/:jobId/:recruiterId",
+        component:UpdateJobsComponent 
       }
     ]
   }

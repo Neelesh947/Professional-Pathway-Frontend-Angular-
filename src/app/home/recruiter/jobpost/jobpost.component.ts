@@ -13,35 +13,6 @@ import Swal from 'sweetalert2';
 })
 export class JobpostComponent implements OnInit{
 
-  toppings = new FormControl('');
-
-  toppingList: string[] = ['Core Java', 'Advanced java', 'Java', 'Python', 'JavaScript', 'C#', 'C++', 'Ruby', 'Swift', 'Kotlin',
-  'HTML5', 'CSS3', 'React', 'Angular', 'Vue.js', 'Node.js',
-  'SQL', 'MySQL', 'PostgreSQL', 'MongoDB', 'Oracle Database',
-  'Spring Boot', 'Django', 'Express.js', 'Flask',
-  'Android Development', 'iOS Development',
-  'Amazon Web Services (AWS)', 'Microsoft Azure', 'Google Cloud Platform (GCP)',
-  'Docker', 'Kubernetes', 'Jenkins', 'Git',
-  'TensorFlow', 'PyTorch', 'Pandas', 'NumPy', 'Scikit-Learn',
-  'Ethical Hacking', 'Network Security', 'Penetration Testing', 'Cryptography',
-  'Verbal Communication', 'Written Communication', 'Listening Skills',
-  'Critical Thinking', 'Analytical Skills', 'Decision Making',
-  'Collaboration', 'Conflict Resolution', 'Team Building',
-  'Flexibility', 'Open-mindedness', 'Willingness to Learn',
-  'Prioritization', 'Meeting Deadlines',
-  'Delegation', 'Decision Making', 'Motivation',
-  'Innovation', 'Thinking Outside the Box',
-  'Accuracy', 'Thoroughness',
-  'Self-awareness', 'Empathy',
-  'Agile', 'Scrum', 'Kanban',
-  'Budgeting', 'Financial Analysis',
-  'Digital Marketing', 'Content Marketing', 'Social Media Marketing',
-  'Relationship Building', 'Negotiation Skills',
-  'Problem Resolution', 'Communication Skills',
-  'Goal Setting', 'SWOT Analysis',
-  'Business Planning', 'Risk Management',
-  'Business Intelligence', 'Data Visualization'];
-
   ngOnInit(): void {
     
   }

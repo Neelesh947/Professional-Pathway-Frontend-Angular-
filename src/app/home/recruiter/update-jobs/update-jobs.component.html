@@ -1,69 +1,76 @@
 <mat-card>
-    <h1 class="heading">Post Your Job</h1>
+    <h1>Update Job</h1>
     <mat-card-content>
         <div class="bootstrap-wrapper">
             <div class="row">
                 <div class="col-md-8 offset-2">
-                    <form (ngSubmit)="formSubmit()">
-                       
-                        <mat-form-field appearance="fill" class="width100" >
-                            <mat-label>Enter Job Title</mat-label>
+                    <form *ngIf="job" (ngSubmit)="formSubmit()">
+
+                        <mat-form-field appearance="fill" class="width100">
                             <input matInput
-                            name="title" [(ngModel)]="job.title"
+                                   name="jobId"
+                                   [value]="jobId"
+                                   [disabled]="isFieldDisscaled">
+                        </mat-form-field>
+                        
+                        <mat-form-field appearance="fill" class="width100" >
+                            <mat-label>Update Titles</mat-label>
+                            <input matInput
+                            name="title" 
+                            [(ngModel)]="this.job.title"
                             placeholder="Enter here">
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="width100" >
-                            <mat-label>Enter Job Description</mat-label>
+                            <mat-label>Update Job Description</mat-label>
                             <textarea name="description"
-                                matInput [(ngModel)]="job.description"
+                                matInput [(ngModel)]="this.job.description"
                                 placeholder="Enter here"
                                 rows="3"></textarea>
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="marks">
-                            <mat-label>Enter Total Years of Experience required</mat-label>
-                            <input matInput [(ngModel)]="job.experience"
+                            <mat-label>Update Total Years of Experience required</mat-label>
+                            <input matInput [(ngModel)]="this.job.experience"
                             name="experience"
                             placeholder="Enter here">
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="questions">
-                            <mat-label>Enter Number Of Available posts</mat-label>
-                            <input matInput [(ngModel)]="job.noOfPost"
+                            <mat-label>Update Number Of Available posts</mat-label>
+                            <input matInput [(ngModel)]="this.job.noOfPost"
                             name="noOfPost"
                             placeholder="Enter here">
-                        </mat-form-field>   
-                        
+                        </mat-form-field> 
+
                         <mat-form-field appearance="fill" class="width100" >
-                            <mat-label>Enter Company Name</mat-label>
+                            <mat-label>Update Company Name</mat-label>
                             <input matInput
-                            name="company" [(ngModel)]="job.company"
+                            name="company" [(ngModel)]="this.job.company"
                             placeholder="Enter here">
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="width100" >
-                            <mat-label>Enter Job/Company Location</mat-label>
-                            <input matInput [(ngModel)]="job.location"
+                            <mat-label>Update Job/Company Location</mat-label>
+                            <input matInput [(ngModel)]="this.job.location"
                             name="location"
                             placeholder="Enter here">
-                        </mat-form-field>
+                        </mat-form-field>  
 
                         <mat-form-field appearance="fill" class="marks">
-                            <mat-label>Enter Salary</mat-label>
-                            <input matInput [(ngModel)]="job.salary"
+                            <mat-label>Update Salary</mat-label>
+                            <input matInput [(ngModel)]="this.job.salary"
                             name="salary"
                             placeholder="Enter here">
                         </mat-form-field>
 
                         <mat-form-field appearance="fill" class="questions">
-                            <mat-label>Enter Employement Types</mat-label>
-                            <input matInput [(ngModel)]="job.employmentType"
+                            <mat-label>Update Employement Types</mat-label>
+                            <input matInput [(ngModel)]="this.job.employmentType"
                             name="employmentType"
                             placeholder="Enter here">
                         </mat-form-field>  
 
-                        
                         <mat-form-field appearance="fill" class="skills" >
                             <mat-label>Enter Skills</mat-label>
                             <input matInput [(ngModel)]="job.skills"
@@ -72,21 +79,21 @@
                         </mat-form-field>
 
                         <mat-form-field class="example-full-width">
-                            <mat-label>Choose deadline date</mat-label>
-                            <input  [(ngModel)]="job.applicationDeadlines"
+                            <mat-label>Update deadline date</mat-label>
+                            <input  [(ngModel)]="this.job.applicationDeadlines"
                             matInput name="applicationDeadlines">
                             <mat-hint>YYYY-MM-DD</mat-hint>
                         </mat-form-field>
                         
                         <mat-form-field appearance="fill" class="width100" >
-                            <mat-label>Enter Contact Information</mat-label>
-                            <input matInput [(ngModel)]="job.contactInformation"
+                            <mat-label>Update Contact Information</mat-label>
+                            <input matInput [(ngModel)]="this.job.contactInformation"
                             name="contactInformation"
                             placeholder="Enter here">
                         </mat-form-field>
                                  
                           <div class="container text-center ">
-                            <button mat-raised-button color="primary">Post</button>
+                            <button mat-raised-button color="primary">Update</button>
                         </div>
                     </form>
                 </div>

@@ -29,4 +29,10 @@ export class JobsearchService {
   {
     return this.http.post(`http://localhost:8083/jobpost/`,job)
   }
+
+  //update jobs
+  public updatejobpost(jobId:any,updatedJob: any)
+  {
+    return this.http.put(`http://localhost:8083/jobpost/job/${jobId}`,updatedJob)
+  }
 }

@@ -20,7 +20,9 @@
                     <mat-card-actions >                        
                         <button mat-stroked-button 
                         color="primary">View</button>
-                        <button mat-raised-button color="accent" style="margin-left: 60px;">Edit</button>
+                        <button mat-raised-button 
+                        [routerLink]="'/recruiter-dashboard/edit-jobs/'+q.jobId+'/'+q.recruiterId"
+                        color="accent" style="margin-left: 60px;">Edit</button>
                     </mat-card-actions>
                 </mat-card>
 
