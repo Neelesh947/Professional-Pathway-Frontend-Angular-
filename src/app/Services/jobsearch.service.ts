@@ -35,4 +35,11 @@ export class JobsearchService {
   {
     return this.http.put(`http://localhost:8083/jobpost/job/${jobId}`,updatedJob)
   }
+
+
+  //list of applied users
+  public appliedJobByUser(userId:any)
+  {
+    return this.http.get(`http://localhost:8083/jobpost/user/${userId}`)
+  }
 }
